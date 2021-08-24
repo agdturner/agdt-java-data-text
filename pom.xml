@@ -37,32 +37,46 @@
             </roles>
         </developer>
     </developers>
-    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+            </plugin>
+        </plugins>
+    </build>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <agdt-java-generic.version>1.0-SNAPSHOT</agdt-java-generic.version>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <agdt-java-generic.version>1.9</agdt-java-generic.version>
     </properties>
     
     <dependencies>
         <dependency>
-            <groupId>uk.ac.leeds.ccg.andyt</groupId>
+            <groupId>io.github.agdturner</groupId>
             <artifactId>agdt-java-generic</artifactId>
             <version>${agdt-java-generic.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <version>[4.13.1,)</version>
+            <!--
             <version>4.12</version>
+            -->
             <scope>test</scope>
         </dependency>
         <!-- jsoup HTML parser library @ https://jsoup.org/ -->
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
+            <version>[1.14.2,)</version>
+            <!--
             <version>1.11.2</version>
-            <!--<version>1.8.3</version>-->
+            <version>1.8.3</version>
+            -->
         </dependency>
     </dependencies>
     
